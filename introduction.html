@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Introduction Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main>
+        <form id="introductionForm" action="">
+            <h1>Introduction:</h1>
+
+            <!--first name input field-->
+            <div class="tab">
+                <label for="firstname">First Name:</label>
+                <p><input placeholder="First Name..." type="text"></p>
+                <div class="error" id="firstnameError"></div>
+            </div>
+
+            <!--last name input field-->
+            <div class="tab">
+                <label for="lastname">Last Name:</label>
+                <p><input placeholder="Last Name..." type="text"></p>
+                <div class="error" id="lastnameError"></div>
+            </div>
+
+            <!--email input field-->
+            <div class="tab">
+                <label for="email">Email:</label>
+                <p><input placeholder="Email..." type="email"></p>
+                <div class="error" id="emailError"></div>
+            </div>
+
+            <!-- gender input field  -->
+            <div class="tab">
+                <p>Select your gender:</p>
+                <p><input type="radio" name="gender" value="Male"></p>
+                <label></label><br>
+
+                <p><input type="radio" name="gender" value="Female"></p>
+                <label></label>
+            </div>
+
+            <!--phone number input field-->
+            <div class="tab">
+                <label for="phone">Phone:</label>
+                <p><input placeholder="Phone..." type="number"></p>
+                <div class="error" id="phoneError"></div>
+            </div>
+        </form>
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>

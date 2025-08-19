@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>
+        Step Form
+    </title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <form id="multiStepForm">
+            <!-- Introduction page  -->
+            <div class="form-step active" id="step1">
+                <div class="heading"><h2>&nbsp;Step1: Introduction</h2></div>
+                
+                <div class="form-group">
+                    <label for="firstName">First Name:</label>
+                    <input placeholder="First Name..." type="text" id="firstName" required>
+                    <div class="error" id="firstNameError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName">Last Name:</label>
+                    <input placeholder="Last Name..." type="text" id="lastName" required>
+                    <div class="error" id="lastNameError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input placeholder="Email..." type="email" id="email" required>
+                    <div class="error" id="emailError"></div>   
+                </div>
+
+                <div class="form-group">
+                    <label>Gender</label>
+                    <select id="gender" required>
+                        <option>--Select Gender--</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                    <div class="error" id="genderError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input placeholder="Phone..." type="number" id="phone" required>
+                    <div class="error" id="phoneError"></div>
+                </div>
+
+                <div class="buttons">
+                    <span></span>
+                    <button type="button" onclick="nextStep(1)">Next</button>
+                </div>
+            </div>
+
+
+            <!-- Education Page  -->
+            <div class="form-step" id="step2">
+                <div class="heading"><h2>&nbsp;Step2: Education</h2></div>
+
+                <div class="form-group">
+                    <label for="qualification">Highest Qualification</label>
+                    <input type="text" placeholder="Qualification" id="qualification" required>
+                    <div class="error" id="qualificationError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="course">Course</label>
+                    <input type="text" placeholder="Course" id="course" required>
+                    <div class="error" id="courseError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="college">College Name</label>
+                    <input type="text" placeholder="College" id="college" required>
+                    <div class="error" id="collegeError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="fieldofstudy">Field Of Study</label>
+                    <input type="text" placeholder="Field of Study" id="fieldofstudy" required>
+                    <div class="error" id="fieldofstudyError"></div>
+                </div>
+
+                <div class="buttons">
+                    <button type="button" onclick="prevStep(1)">Back</button>
+                    <button type="button" onclick="nextStep(2)">Next</button>
+                </div>
+            </div>
+
+
+            <!-- Experience Page  -->
+            <div class="form-step" id="step3">
+                <div class="heading"><h2>&nbsp;Step3: Experience</h2></div>
+
+                <div class="form-group">
+                    <label for="company">Company Name</label>
+                    <input type="text" placeholder="Company" id="company" required>
+                    <div class="error" id="companyError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="jobTitle">Job Title</label>
+                    <input type="text" placeholder="Job Title" id="jobTitle" required>
+                    <div class="error" id="jobTitleError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="experience">Years of Experience</label>
+                    <input type="number" placeholder="Experience" id="experience" required>
+                    <div class="error" id="experienceError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="startDate">Start Date</label>
+                    <input type="date" placeholder="Date..." id="startDate" required>
+                    <div class="error" id="startDateError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="endD    ate">End Date</label>
+                    <input type="Date" placeholder="Date..." id="endDate" required>
+                    <div class="error" id="endDateError"></div>
+                </div>
+
+
+                <div class="buttons">
+                    <button type="button" onclick="prevStep(2)">Back</button>
+                    <button type="button" onclick="nextStep(3)">Next</button>
+                </div>
+            </div>
+
+
+            <!-- Review Page  -->
+            <div class="form-step" id="step4">
+                <div class="heading"><h2>&nbsp;Step4: Review your information</h2></div>
+                <div id="reviewDiv"></div>
+
+                <div class="buttons">
+                    <button type="button" onclick="prevStep(3)">Back</button>
+                    <button type="submit">Submit</button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
